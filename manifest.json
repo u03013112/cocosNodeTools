@@ -1,0 +1,36 @@
+{
+    "manifest_version": 2,
+    "name": "ccNodeHelper",
+    "version": "0.0.1",
+    "description": "",
+    "icons": {
+        "16": "img/icon.png",
+        "48": "img/icon.png",
+        "128": "img/icon.png"
+    },
+    "browser_action": {
+        "default_icon": "img/icon.png",
+        "default_title": "ccNodeHelper",
+        "default_popup": "popup.html"
+    },
+    "background": {
+        "scripts": ["js/background.js"]
+    },
+    "content_scripts": [{
+        "matches": [
+            "<all_urls>"
+        ],
+        "js": [
+            "js/injectCustomJs.js"
+        ],
+        "run_at": "document_end"
+    }],
+    "permissions": [
+        "activeTab",
+        "tabs"
+    ],
+    "web_accessible_resources": [
+        "js/inject.js",
+        "js/ccnode.js"
+    ]
+}
