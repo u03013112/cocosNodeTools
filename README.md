@@ -1,0 +1,2 @@
+# cocosNodeTools
+一个方便针对cocos creator在网页里找到node的工具
